@@ -1,0 +1,6 @@
+resource "aws_key_pair" "mykeypair" {
+  key_name   = "mykeypair"
+  public_key = file(var.PATH_TO_PUBLIC_KEY)
+}
+
+# use terraform import aws_key_pair.mykeypair key_name (it already created)
